@@ -12,34 +12,39 @@ INSERTAR REGISTROS
 
 
 
-
-<!--<form method="post" action="/productos" type="multipart/form-data">-->
 {!! Form::open(['url' => '/productos' , 'method' => 'post', 'files'=>true]) !!}
     
 
 	
 	<table>
 		<tr>
-			<!--<td>Foto: </td>	<td><input type="file" name="imagen">@csrf</td>-->
 		<td>Foto: </td>	<td>{!! Form::file('file')!!}</td>
 		</tr>
 		<tr>
-			<td>Nombre: </td>	<td><input type="text" name="nombre_articulo">	@csrf</td>
+			<td>{!! Form::label('nombre', 'Nombre: ') !!}</td>	
+			<td>{!! Form::text('nombre_articulo') !!}	@csrf</td>
 		</tr>
 		<tr>
-			<td>Seccion: </td>	<td><input type="text" name="seccion">@csrf</td>
+			<td>{!! Form::label('seccion', 'Seccion: ') !!}</td>
+			
+			<td>{!! Form::text('seccion') !!} @csrf</td>
 		</tr>
 		<tr>
-			<td>Precio: </td><td><input type="text" name="precio" required>	@csrf</td>
+			<td>{!! Form::label('precio', 'Precio: ') !!}</td>
+			<td>{!! Form::text('precio') !!}	@csrf</td>
 		</tr>
-		<tr><td>Fecha: </td><td><input type="text" name="fecha">@csrf</td>
+		<tr><td>{!! Form::label('fecha', 'Fecha: ') !!}</td>
+			<td>{!! Form::text('fecha') !!}@csrf</td>
 		</tr>
-		<tr><td>Pais de origen: </td><td><input type="text" name="pais_origen">{{csrf_field()}}</td>
+		<tr><td>{!! Form::label('pais_origen', 'Pais de origen: ') !!}</td>
+			<td>{!! Form::text('pais_origen') !!}{{csrf_field()}}</td>
 		</tr>
 		<tr>
 			<td align="center" colspan="2">
-				<input type="submit" name="enviar" value="Registrar">
-				<input type="reset" name="Borrar" value="Borrar"></td>
+				<!--<input type="submit" name="enviar" value="Registrar">-->
+				{!! Form::submit('Enviar')  !!}
+				<input type="reset" name="Borrar" value="Borrar">
+			</td>
 		</tr>
 </table>
 

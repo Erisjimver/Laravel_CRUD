@@ -14,6 +14,7 @@ LEER INFORMACION
 	<td>Precio</td>
 	<td>Fecha</td>
 	<td>Pais de origen</td>
+	<th>Imagen: </th>
 
 </tr>
 
@@ -25,7 +26,7 @@ LEER INFORMACION
 	<td>{{$producto->precio}}</td>
 	<td>{{$producto->fecha}}</td>
 	<td>{{$producto->pais_origen}}</td>
-
+	<td><img src="images/{{$producto->ruta}}" width="100px" height="50px"></td>
 </tr>
 @endforeach
 

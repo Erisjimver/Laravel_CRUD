@@ -40,7 +40,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+/*       //
         $this->validate($request,['seccion'=>'required']);
         //return view("productos.insert");
         $producto=new Producto;
@@ -54,16 +54,16 @@ class ProductosController extends Controller
 
         $producto->save();
           
- 
+ */
         
-     /*   $entrada=$request->all();
+        $entrada=$request->all();
         if($archivo=$request->file('file')){
             $nombre=$archivo->getClientOriginalName();
             $archivo->move('images', $nombre);
             $entrada['ruta']=$nombre;
         }
         Producto::create($entrada);
-*/
+
     }
 
     /**
